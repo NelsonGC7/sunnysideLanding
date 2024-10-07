@@ -568,28 +568,8 @@ video {
   z-index: 0;
 }
 
-.z-10{
-  z-index: 10;
-}
-
-.z-30{
-  z-index: 30;
-}
-
 .z-40{
   z-index: 40;
-}
-
-.-z-10{
-  z-index: -10;
-}
-
-.-z-40{
-  z-index: -40;
-}
-
-.z-50{
-  z-index: 50;
 }
 
 .mx-auto{
@@ -646,28 +626,12 @@ video {
   width: 8rem;
 }
 
-.w-full{
-  width: 100%;
-}
-
-.w-96{
-  width: 24rem;
-}
-
 .w-\[100\%\]{
   width: 100%;
 }
 
-.max-w-\[600px\]{
-  max-width: 600px;
-}
-
-.max-w-6xl{
-  max-width: 72rem;
-}
-
-.max-w-\[50\%\]{
-  max-width: 50%;
+.w-full{
+  width: 100%;
 }
 
 .max-w-\[425px\]{
@@ -811,6 +775,10 @@ video {
   padding-top: 3rem;
 }
 
+.pb-14{
+  padding-bottom: 3.5rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -918,16 +886,20 @@ video {
   transition-duration: 100ms;
 }
 
-.duration-150{
-  transition-duration: 150ms;
-}
-
 .\[font-family\:Fraunces\]{
   font-family: Fraunces;
 }
 
 .\[font-zise\:1rem\]{
   font-zise: 1rem;
+}
+
+.\[grid-area\:areaA\]{
+  grid-area: areaA;
+}
+
+.\[grid-area\:imagenA\]{
+  grid-area: imagenA;
 }
 
 .\[letter-spacing\:\.3rem\]{
@@ -948,6 +920,7 @@ video {
 
 body{
   font-family: "Fraunces" ;
+  transition: all;
 }
 
 .custom-img{
@@ -1064,7 +1037,44 @@ body{
 }
 
 .custom-nav{
-  display: flex !important;
+  display: flex;
+}
+
+@media(width>1024px){
+  .ci-one{
+    background: url(../images/desktop/image-transform.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .ci-two{
+    background: url(../images/desktop/image-stand-out.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .ci-tree{
+    background: url(../images/desktop/image-graphic-design.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .ci-four{
+    background:url(../images/desktop/image-photography.jpg) no-repeat center;
+    background-size: cover;
+  }
+
+  .customGrid-dos{
+    background-color: aqua;
+    max-width: 100%;
+    height: 200vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    grid-template-areas: 
+       'areaA imagenA'
+       'areaB imagenB'
+       'imagenC imagenD'
+       ;
+  }
 }
 
 .hover\:scale-125:hover{
@@ -1082,8 +1092,114 @@ body{
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-blue-500:hover{
+.hover\:text-white:hover{
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px){
+  .lg\:relative{
+    position: relative;
+  }
+
+  .lg\:flex{
+    display: flex;
+  }
+
+  .lg\:hidden{
+    display: none;
+  }
+
+  .lg\:h-10{
+    height: 2.5rem;
+  }
+
+  .lg\:h-\[80vh\]{
+    height: 80vh;
+  }
+
+  .lg\:min-h-full{
+    min-height: 100%;
+  }
+
+  .lg\:w-\[100\%\]{
+    width: 100%;
+  }
+
+  .lg\:min-w-full{
+    min-width: 100%;
+  }
+
+  .lg\:max-w-\[100\%\]{
+    max-width: 100%;
+  }
+
+  .lg\:translate-y-0{
+    --tw-translate-y: 0px;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:flex-row{
+    flex-direction: row;
+  }
+
+  .lg\:items-start{
+    align-items: flex-start;
+  }
+
+  .lg\:justify-end{
+    justify-content: flex-end;
+  }
+
+  .lg\:gap-4{
+    gap: 1rem;
+  }
+
+  .lg\:bg-black{
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  }
+
+  .lg\:bg-transparent{
+    background-color: transparent;
+  }
+
+  .lg\:bg-white{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .lg\:bg-\[url\(\.\.\/images\/desktop\/image-header\.jpg\)\]{
+    background-image: url(../images/desktop/image-header.jpg);
+  }
+
+  .lg\:px-24{
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .lg\:py-24{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:px-16{
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .lg\:text-left{
+    text-align: left;
+  }
+
+  .lg\:text-white{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .hover\:lg\:bg-blue-200:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+  }
 }
 
